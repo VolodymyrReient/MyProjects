@@ -36,5 +36,4 @@ console.log (
 `середнє значення: ${averageValue}\n`,
 `Знижка у відсотках: ${percentageDiscount}%\n`,
 `До оплати із знижкою ${priceWithDiscount}\n`,
-`Чистий прибуток: ${netProfit}`
-);
+`Чистий прибуток: ${netProfit}`);
