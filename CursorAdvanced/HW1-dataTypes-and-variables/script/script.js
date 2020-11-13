@@ -22,7 +22,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 console.log(
-  `Максимальна ціна: ${maxPrice}, 
+`Максимальна ціна: ${maxPrice}, 
 Мінімальна ціна: ${minPrice},
 Загальна сума: ${sumArticle},
 Загальна сума без монет: ${sumArticleNoCoins},
