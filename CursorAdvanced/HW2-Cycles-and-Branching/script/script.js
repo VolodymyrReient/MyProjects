@@ -19,3 +19,4 @@ if (Number.isInteger(getN) && Number.isInteger(getN) && getN < getM) {
     }
 } else {
     console.log("Enter an integer");
+}
