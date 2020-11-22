@@ -5,12 +5,16 @@ console.log(getMaxDigit(123456));
 //2 function
 function getPow (x, y) {
     let res=1;
-    for (let i=1; i<=y; i++) {
+    for (let i=1; i<=Math.abs(y); i++) {
         res *= x;
     }
-    return res;
-}
-console.log(getPow(5, 2));
+    if (y < 0) {
+        return 1 / res;
+    } else {
+        return res;
+    }
+    }
+console.log(getPow(5, -2));
 
 //3 function
 function formatName (name) {
