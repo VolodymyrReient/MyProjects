@@ -44,4 +44,4 @@ function groupAssessments() {
     }
     return groupReting;
 }
-console.log(groupAssessments());
+console.log(groupAssessments())
