@@ -40,4 +40,4 @@ function uniqueLetters(str) {
     });
     return res.join();
 }
-console.log(uniqueLetters("Бісквіт був дуже ніжним"))
+console.log(uniqueLetters("Бісквіт був дуже ніжним"));
