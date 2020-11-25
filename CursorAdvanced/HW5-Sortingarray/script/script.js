@@ -74,7 +74,7 @@ numbers.forEach((num) => {
 return withoutResidue;
 }
 
-console.log
+console.log(
     `
     Массив рандомних чисел(на вході 10, 3, 50): ${getRandomArray(10, 3, 50)},
     Мода(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2): ${getMode(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)},
