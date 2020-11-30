@@ -85,4 +85,4 @@ function calculateWordLetters(word) {
   });
   return result;
 }
-console.log(calculateWordLetters("тест"))
+console.log(calculateWordLetters("тест"));
