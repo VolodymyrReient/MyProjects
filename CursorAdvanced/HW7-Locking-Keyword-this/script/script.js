@@ -53,4 +53,4 @@ const getMySalary = function () {
 }
 console.log(`Загальна інформація про зарплати в Україні: ${getMySalary.call(ukraine)}`);
 console.log(`Загальна інформація про зарплати в Латвії: ${getMySalary.call(latvia)}`);
-console.log(`Загальна інформація про зарплати в Литві: ${getMySalary.call(litva)}`)
+console.log(`Загальна інформація про зарплати в Литві: ${getMySalary.call(litva)}`);
