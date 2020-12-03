@@ -3,23 +3,21 @@ const getMaxDigit = (number) => +Math.max(...(number + ''));
 console.log(getMaxDigit(123456));
 
 //2 function
-function getPow (x, y) {
+function getPow (number, power) {
     let res=1;
-    for (let i=1; i<=Math.abs(y); i++) {
-        res *= x;
+    for (let i=1; i <= Math.abs(power); i++) {
+        res *= number;
     }
-    if (y < 0) {
+    if (power < 0) {
         return 1 / res;
     } else {
         return res;
     }
     }
-console.log(getPow(5, -2));
+console.log(getPow(5, 2));
 
 //3 function
-function formatName (name) {
-    return name[0].toUpperCase() + name.slice(1).toLowerCase();
-}
+const formatName = (name) => name[0].toUpperCase() + name.slice(1).toLowerCase();
 console.log(formatName("VOloDYmyR"));
 
 //4 function
@@ -31,15 +29,13 @@ function calcTax (wage) {
 console.log(calcTax(1000));
 
 //5 function
-function getRandomIntInclusive(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const getRandomIntInclusive = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 console.log(getRandomIntInclusive(1,10));
 
 //6 function
 function uniqueLetters(str) {
-    let string = str.toLowerCase().split('');
-    let res = string.filter(function(val, i, str) {
+    const string = str.toLowerCase().split('');
+    const res = string.filter((val, i, str) => {
     return str.lastIndexOf(val) === str.indexOf(val);
     });
     return res.join();
