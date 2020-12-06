@@ -37,6 +37,6 @@ console.log("Поставили оцінку",volodymyr.getMarks);
 console.log("Середній бал",volodymyr.getAverageMark());
 console.log("Студента виключено",volodymyr.dismiss());
 volodymyr.setMarks = 5;
-console.log("Студента поновлено",volodymyr.recover())
+console.log("Студента поновлено",volodymyr.recover());
 
 
