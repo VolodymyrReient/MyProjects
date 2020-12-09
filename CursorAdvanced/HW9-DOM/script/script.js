@@ -16,4 +16,4 @@ function generateBlocks() {
       clearInterval(randomColor);
     }  
 }
-btn.addEventListener("click", generateBlocks);
+btn.addEventListener("click", generateBlocks)
