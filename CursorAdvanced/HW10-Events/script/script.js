@@ -1,6 +1,6 @@
 const keys = document.querySelectorAll(".key");
 const audio = new Audio();
-const tracks = ['../audio/do.mp3', "../audio/re.mp3", "../audio/mi.mp3", "../audio/fa.mp3", "../audio/sol.mp3",  "../audio/lja.mp3", "../audio/si.mp3"];
+const tracks = ['audio/do.mp3', "audio/re.mp3", "audio/mi.mp3", "audio/fa.mp3", "audio/sol.mp3",  "audio/lja.mp3", "audio/si.mp3"];
 audio.autoplay = false;
 document.addEventListener('keydown', function(e) {
   switch (e.code){
