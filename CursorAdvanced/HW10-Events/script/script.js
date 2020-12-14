@@ -47,5 +47,5 @@ document.addEventListener('keydown', function(e) {
       audio.play();
       break;
    } 
-  });
+  })
 
