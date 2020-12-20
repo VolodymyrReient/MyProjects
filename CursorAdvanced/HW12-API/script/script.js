@@ -1,4 +1,4 @@
-let heros = [];
+let heroes = [];
 function getHero () {
 fetch("https://swapi.dev/api/films/2/")
     .then((response) => {
@@ -13,15 +13,15 @@ fetch("https://swapi.dev/api/films/2/")
             })
             .then((data) => {
             const protagonist = data;
-            heros.push(protagonist);
+            heroes.push(protagonist);
             })
             })    
-        return   heros;  
+        return   heroes;  
         
     }) 
    
-   return  heros;  
+   return  heroes;  
 }
 getHero ();
-console.log(heros);
+console.log(heroes);
 
