@@ -6,7 +6,7 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
 async function getHero() {
-    const response =  await fetch("https://swapi.dev/api/films/2/");
+    const response =  await fetch("http://swapi.dev/api/films/2/");
     const json = await response.json();
     const heroes = json.characters;
     heroes.forEach(e =>{
