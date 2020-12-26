@@ -7,8 +7,9 @@ body {
 }
 .heroes_list {
   width: 98%;
-  height: 200px;
+  height: auto;
   display: none;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
