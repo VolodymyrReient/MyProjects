@@ -24,27 +24,20 @@ const students = [{
   }
 }];
 
-function getSubjects(student) {
-  let sub = Object.keys(student.subjects);
-  sub = sub.map((item) => {
-    item = item[0].toUpperCase() + item.slice(1).toLowerCase();
-    if (item.includes('_')) {
-      return item.split('_').join(' ');
-    }
-    return item;
-  });
-  return sub;
-}
+const getSubjects = (student) => 
+Object.keys(student.subjects).map((el) => 
+(el[0].toUpperCase() + el.slice(1)).replace("_", " ") );
 console.log(getSubjects(students[0]));
 
 function getAverageMark(student) {
-  let rating = Object.values(student.subjects).flat();
-  let averageGrade = 0;
-  rating.forEach((e) => {
-    averageGrade += e;
+  const ratingKeys = Object.entries(student.subjects);
+  const rating = ratingKeys.map(el => {return el[1]});
+  const sum = rating.flat().reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
   });
-  return +(averageGrade / rating.length).toFixed(2);
-}
+  return +(sum/rating.flat().length).toFixed(2);
+  }
+getAverageMark(students[0]);
 console.log(getAverageMark(students[0]));
 
 function getStudentInfo(student) {
@@ -56,13 +49,13 @@ function getStudentInfo(student) {
 }
 console.log(getStudentInfo(students[0]));
 
-function getStudentsNames(students) {
-  let arrayNames = students.map((obj) => {
+const getStudentsNames = (students) => {
+  const arrayNames = students.map((obj) => {
     return obj.name;
   });
   return arrayNames.sort();
 }
-console.log(getStudentsNames(students));
+ console.log(getStudentsNames(students));
 
 
 function getBestStudent(students) {
@@ -78,7 +71,7 @@ function getBestStudent(students) {
 console.log(getBestStudent(students));
 
 function calculateWordLetters(word) {
-  let wordArr = [...word]
+  const wordArr = [...word]
   let result = {};
   wordArr.forEach((a) => {
     result[a] = result[a] + 1 || 1;
