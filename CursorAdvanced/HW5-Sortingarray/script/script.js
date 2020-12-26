@@ -1,18 +1,15 @@
 // 1
-function getRandomArray(length, min, max) {
-    return Array.apply(null, Array(length)).map(() => {
-        return Math.round(Math.random()*(max - min) + min);
-    });
-}
+const getRandomArray = (length, min, max)=> 
+Array.from({length}).map(el=> Math.round(Math.random()*(min, max)));
 
 // 2
 function getMode(...arr) {
-    let
-        key, result = [],
-        count = {}, 
-        max = -Infinity,
-        nomodeMsg = "The array hasn't mode.",
-        nomodeFlag = true;
+    let key = [];
+    const result = [];
+    const count = {};
+    let max = -Infinity;
+    const nomodeMsg = "The array hasn't mode.";
+    let nomodeFlag = true;
     arr.forEach((item) => {
         if ( !(item in count) && Number.isInteger(item)) count[item] = 0;
         count[item]++
@@ -30,16 +27,7 @@ function getMode(...arr) {
 }
 
 // 3 
-function filterEvenNumbers (...numbers) {
-    const arr = [...numbers];
-    let oddNum = [];
-    arr.forEach((num) => {
-        if (num % 2 === 1) {
-            oddNum.push(num);
-        }
-    });
-    return oddNum;
-    }
+const filterEvenNumbers = (...numbers) => numbers.filter(el=> el%2)
 
 // 4
 function getAverage(...numbers) {
@@ -64,15 +52,7 @@ return count;
 }
 
 // 6
-function getDividedByFive(...numbers) {
-const withoutResidue = [];
-numbers.forEach((num) => {
-    if (num % 5 === 0){
-        withoutResidue.push(num);
-    }
-})
-return withoutResidue;
-}
+const getDividedByFive = (...numbers) => numbers.filter(el=>  el % 5 === 0);
 
 console.log(
     `
