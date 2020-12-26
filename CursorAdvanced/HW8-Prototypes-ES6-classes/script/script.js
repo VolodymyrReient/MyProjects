@@ -3,7 +3,8 @@ class Student {
         this.marks = [5, 4, 4, 5];
         this.university = university;
         this.course = course;
-        this.fullName = fullName;
+        this.fullName = fullName,
+        this.study = true
     }
     getInfo () {
         return `Студент ${this.course}го курсу ${this.university} м.Львів, ${this.fullName}`;
@@ -12,6 +13,7 @@ class Student {
         return this.marks;
     }
     set setMarks(mark) {
+       if (this.study === true)
         this.marks.push(mark);
     }
     getAverageMark() {
@@ -22,11 +24,23 @@ class Student {
         return +(average / this.marks.length).toFixed(2);
     }
     dismiss() {
-        return this.marks = [null];
+        if(this.study === true) {
+            this.study = false;
+            return this.marks = [null]
+        } else {
+            return "Виключений";
+        };
     }
     recover() {
-        return this.marks = [5, 4, 4, 5];
+        if(this.study === false) {
+            this.study = true;
+            return this.marks = [5, 4, 4, 5];
+        } else {
+            return "Навчається " + this.marks;
+        }
+        
     }
+    
 }
 const volodymyr = new Student("НУ ЛП", "4", "Реєнт Володимир Олегович");
 
@@ -36,7 +50,15 @@ volodymyr.setMarks = 5;
 console.log("Поставили оцінку",volodymyr.getMarks);
 console.log("Середній бал",volodymyr.getAverageMark());
 console.log("Студента виключено",volodymyr.dismiss());
-volodymyr.setMarks = 5;
+console.log(volodymyr.dismiss());
 console.log("Студента поновлено",volodymyr.recover());
+console.log(volodymyr.recover());
+console.log(volodymyr.dismiss());
+console.log(volodymyr.dismiss());
+console.log(volodymyr.recover());
+console.log(volodymyr.recover());
+
+
+
 
 
