@@ -13,5 +13,4 @@ function getRandomInt(min, max) {
 function generateBlocks() {
     squareAll.classList.toggle("wrapper-show");   
     }  
-}
 btn.addEventListener("click", generateBlocks);
