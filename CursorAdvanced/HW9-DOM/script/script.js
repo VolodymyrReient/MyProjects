@@ -12,7 +12,7 @@ function getRandomInt(min, max) {
 }, 1000);
 function generateBlocks() {
     squareAll.classList.toggle("wrapper-show");   
-    if(squareAll.classList.contains("wrapper-show") === false) {
+    if(squareAll.classList.contains("wrapper-show")) {
       clearInterval(randomColor);
     }  
 }
