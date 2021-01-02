@@ -11,8 +11,27 @@ function* createIdGenerator(start = 1, end = Infinity, step = 1) {
 console.log(idGenerator.next().value);
 console.log(idGenerator.next().value);
 console.log(idGenerator.next().value);
-console.log(idGenerator.next().value);
-console.log(idGenerator.next().value);
-console.log(idGenerator.next().value);
-console.log(idGenerator.next().value);
-console.log(idGenerator.next().value);
+
+const fontGenerator = newFontGenerator(14);
+
+function* newFontGenerator(initValue) {
+    let value = initValue;
+    while(true) {
+        const char = yield value;
+        if (char ==="up"){
+          value += 2;
+        }
+        else if (char ==="down") {
+            value -= 2;
+        }
+    }
+}
+
+console.log(fontGenerator.next("up").value);
+console.log(fontGenerator.next("up").value);
+console.log(fontGenerator.next("up").value);
+console.log(fontGenerator.next().value);
+console.log(fontGenerator.next("down").value);
+console.log(fontGenerator.next("down").value);
+console.log(fontGenerator.next("down").value);
+console.log(fontGenerator.next().value);
